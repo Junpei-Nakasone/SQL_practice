@@ -1,0 +1,21 @@
+version: '3'
+ 
+services:
+    mysql:
+        image: mysql:5.7
+        container_name: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: pass
+        volumes:
+            - db-volume:/var/lib/mysql
+ 
+    phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin
+      links: 
+            - mysql:db
+      ports:
+            - 8080:80
+       
+volumes:
+  db-volume:
