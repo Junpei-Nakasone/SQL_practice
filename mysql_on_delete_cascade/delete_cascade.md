@@ -37,6 +37,7 @@ SELECT * FROM buildings;
 二つの行が挿入されている
 
 |building_no|building_name|address|
+|:---|:---|:---|
 |1|ACME_Headquaters|3950 North 1st Street|
 |2|ACME sales|5000 North 1st Street|
 
